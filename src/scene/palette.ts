@@ -47,8 +47,15 @@ export function material(swatch: Swatch) {
     flatShading: true,
   });
   result.userData.swatch = swatch;
-  if (swatch === 'glass') { result.transparent = true; result.opacity = .2; result.depthWrite = false; }
-  if (swatch === 'water') { result.roughness = .25; result.metalness = .15; }
+  if (swatch === "glass") {
+    result.transparent = true;
+    result.opacity = 0.2;
+    result.depthWrite = false;
+  }
+  if (swatch === "water") {
+    result.roughness = 0.25;
+    result.metalness = 0.15;
+  }
   return result;
 }
 

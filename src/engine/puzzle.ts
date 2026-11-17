@@ -9,6 +9,7 @@ type Context = {
   hint: number;
 };
 type Event =
+  | { type: "EDIT" }
   | { type: "START" }
   | { type: "PREDICT"; id: string }
   | { type: "CONFIDENCE"; value: Confidence }
@@ -20,6 +21,7 @@ export function createPuzzle(
   puzzle: PuzzleDefinition,
   logger: Logger,
   studentCode: string,
+  runId?: string,
 ) {
   const record = (
     type: "prediction" | "attempt" | "hint" | "completion",
@@ -36,6 +38,7 @@ export function createPuzzle(
       confidence: c.confidence,
       misconception,
       answer,
+      runId,
     });
   return createActor(
     setup({
@@ -140,6 +143,7 @@ export function createPuzzle(
         },
         doing: {
           on: {
+            EDIT: { actions: assign({ result: () => null }) },
             SELECT: { guard: "validSelection", actions: "select" },
             CHECK: { actions: ["check", "logAttempt"], target: "checking" },
             HINT: { actions: ["hint", "nextHint"] },

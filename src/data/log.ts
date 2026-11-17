@@ -11,6 +11,9 @@ export interface LogEvent {
   confidence: Confidence | null;
   misconception: string | null;
   answer?: string;
+  runId?: string;
+  concept?: string;
+  transfer?: boolean;
 }
 type Input = Omit<LogEvent, "id" | "time">;
 export function createLogger(
