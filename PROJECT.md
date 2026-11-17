@@ -120,3 +120,11 @@ Run `npm run dev`, then open http://127.0.0.1:5173/?demo. `npm run build` checks
 7. Run `npm run build` and `npm test`. Stop the dev server with Ctrl+C, then run `npm run smoke`. Expect successful build, unit tests and browser tests.
 
 Unfinished by design: real Clean Water science tasks, detailed village/water plant/characters, Power, Rationing, production login/opening/outro, teacher report, quiz UI and Ask Rio. The three landmarks and sample boxes are placeholders. No colour restoration is included, as requested.
+
+## Level 1 build progress
+
+Latest user scope: direct entry into the Water level, no login or village. Use cotton (not cloth), activated charcoal, fine sand, coarse sand and pebbles from bottom to top. Follow CDC boiling guidance with clearly accelerated animation and cooling before delivery. Push tested stages to seat-a/foundation, never main.
+
+Stage 1: procedural reference-inspired water house, tank, tiled roofs, well, pipes, props and Rio; direct module entry; material-batched geometry. Reference comparison: the first render had less prominent front pipework and sparse planting relative to the reference; simplified geometry is intentional, and gameplay props will occupy the front courtyard. Render uses about 37,500 triangles / 51 draw calls. Software-rendered headless FPS is not a hardware performance claim.
+
+Stage 1 check: npm test; npm run smoke; open /?demo for the water house or /?lab=water_house for the turntable. No login or outer village appears.
