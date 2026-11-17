@@ -1,0 +1,193 @@
+:root {
+  font-family: ui-rounded, "Segoe UI", sans-serif;
+  color: #33473c;
+  background: #dce6df;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+canvas {
+  position: fixed;
+  inset: 0;
+  display: block;
+  touch-action: none;
+}
+#ui {
+  position: relative;
+  min-height: 100vh;
+  pointer-events: none;
+  padding: 32px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+h1 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  letter-spacing: -1px;
+  margin: 10px 0;
+}
+small {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+nav span {
+  font-size: 14px;
+}
+button,
+input {
+  font: inherit;
+  font-size: 17px;
+  pointer-events: auto;
+}
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 14px 20px;
+  background: #315c4d;
+  color: #fff9e8;
+  cursor: pointer;
+  margin: 5px;
+}
+button:hover {
+  filter: brightness(1.12);
+}
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #d39038;
+  outline-offset: 4px;
+}
+button[aria-pressed="true"] {
+  outline: 3px solid #315c4d;
+  background: #d4e2b7;
+}
+.secondary,
+nav button {
+  background: #f9f2de;
+  color: #33473c;
+}
+.panel,
+.hub {
+  pointer-events: auto;
+  border: 1px solid #fff8e5;
+  background: #fff8e9f5;
+  border-radius: 22px;
+  padding: 25px;
+  box-shadow: 0 15px 45px #3e483420;
+}
+h2 {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  margin: 12px 0 18px;
+}
+.hub {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+  width: 340px;
+}
+.landmark {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  text-align: left;
+  background: #e9e3cf;
+  color: #33473c;
+}
+.puzzle {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(850px, 94vw);
+}
+.puzzle p {
+  margin: 8px 0;
+}
+.error {
+  background: #fbe0d8;
+  color: #9a3029;
+  padding: 12px;
+  border-radius: 10px;
+}
+.surprise {
+  background: #f6d88c;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+.note {
+  background: #e9eed8;
+  padding: 10px;
+  border-radius: 10px;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #263e3955;
+  display: grid;
+  place-items: center;
+  pointer-events: auto;
+}
+.overlay .panel {
+  width: 430px;
+}
+label,
+input {
+  display: block;
+}
+input {
+  width: 100%;
+  border: 1px solid #a9b29a;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border-radius: 10px;
+}
+.logs {
+  margin-top: 36px;
+  overflow: auto;
+  max-height: 70vh;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px;
+}
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #d7d9c9;
+}
+.debug {
+  position: fixed;
+  right: 12px;
+  bottom: 8px;
+  background: #22392d;
+  color: white;
+  padding: 8px;
+  font-family: monospace;
+}
+.warning {
+  background: #ffdd9b;
+  padding: 12px;
+}
